@@ -1,22 +1,22 @@
-# Post
+# 게시물 설정
 
-## Creating a post
+## 게시물 생성하기
 
-You can use the `initpost.sh` script to generate new posts when you clone the repo (the script isn't available in the `gem`).
+리포를 클론한 경우 `initpost.sh` 스크립트를 사용하여 새 게시물을 생성할 수 있습니다 (`gem`에서는 사용할 수 없습니다).
 
-To do so, in your project directory, just run:
+프로젝트 디렉토리에서 다음 명령어를 실행하십시오:
 
 ```
 ./initpost.sh -c "Your Post Title"
 ```
 
-The new file will be created in `_posts` with the format `YYYY-MM-DD-your-post-title.md`.
+새 파일은 `_posts`에 `YYYY-MM-DD-your-post-title.md` 형식으로 생성됩니다.
 
-## Front Matter properties
+## Front Matter 속성
 
-If you don't know what these are, check the Jekyll [documentation](https://jekyllrb.com/docs/front-matter/).
+Front Matter가 무엇인지 모른다면 Jekyll [문서](https://jekyllrb.com/docs/front-matter/)를 참고하십시오.
 
-A *Jekflix* post file looks like:
+*Jekflix* 게시물 파일은 다음과 같습니다:
 
 ```yaml
 # _posts/2010-01-01-welcome-to-the-desert-of-the-real.md
@@ -41,15 +41,15 @@ paginate: true
 bla bla bla
 ```
 
-Below is a full list of the template Front Matter properties explained:
+아래는 템플릿의 모든 Front Matter 속성을 설명한 목록입니다:
 
 #### `date`
 
-Type: *datetime*
+타입: *날짜 시간 (datetime)*
 
-The post publishing date. Format: `YYYY-MM-DD hh:mm:ss`
+게시물 게시 날짜입니다. 형식: `YYYY-MM-DD hh:mm:ss`
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -62,9 +62,9 @@ date: 2019-05-16 23:48:05
 
 #### `layout`
 
-Type: *string*
+타입: *문자열 (string)*
 
-The layout file that will be used. The template has only one valid layout for posts, which is `post`.
+사용할 레이아웃 파일입니다. 템플릿에는 게시물에 대해 유효한 레이아웃이 `post` 하나뿐입니다.
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -77,11 +77,11 @@ layout: post
 
 #### `title`
 
-Type: *string*
+타입: *문자열 (string)*
 
-The post title.
+게시물 제목입니다.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -94,13 +94,13 @@ title: Welcome to the desert of the real
 
 #### `subtitle`
 
-*(Optional)*
+*(선택사항)*
 
-Type: *string*
+타입: *문자열 (string)*
 
-The post subtitle. It appears below the title.
+게시물 부제목입니다. 제목 아래에 표시됩니다.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -113,11 +113,11 @@ subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 #### `description`
 
-Type: *string*
+타입: *문자열 (string)*
 
-The post description. It's used in the home and category pages, in meta description tag for SEO purposes and for social media sharing.
+게시물 설명입니다. 홈 및 카테고리 페이지에서, SEO를 위한 메타 설명 태그 및 소셜 미디어 공유에 사용됩니다.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -132,15 +132,15 @@ description: >-
 
 #### `image`
 
-Type: *url*
+타입: *URL*
 
-The featured image. It's used in the home and category pages and for social media sharing.
+추천 이미지입니다. 홈 및 카테고리 페이지와 소셜 미디어 공유에 사용됩니다.
 
-**Tip:** Use a media server to provide images for your website, like [Cloudinary](https://cloudinary.com)
+**팁:** [Cloudinary](https://cloudinary.com)와 같은 미디어 서버를 사용하여 웹사이트에 이미지를 제공하세요.
 
-*Obs: The recommended image resolution is 760x399*
+*참고: 추천 이미지 해상도는 760x399입니다*
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -153,17 +153,17 @@ image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559821647/theme6_qeeo
 
 #### `optimized_image`
 
-*(Optional*)
+*(선택사항)*
 
-Type: *url*
+타입: *URL*
 
-The optimized featured image. Set a smaller image to appear in the home and category pages, they will load faster.
+최적화된 추천 이미지입니다. 홈 및 카테고리 페이지에서 더 빠르게 로드되도록 작은 이미지를 설정합니다.
 
-In case there is no `optimized_image` set, the pages show the one in the `image` property.
+`optimized_image`가 설정되지 않은 경우, 페이지는 `image` 속성에 있는 이미지를 표시합니다.
 
-*Obs: The recommended image resolution is 380x200*
+*참고: 최적화된 이미지 해상도는 380x200입니다*
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -176,11 +176,11 @@ optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380
 
 #### `category`
 
-Type: *string*
+타입: *문자열 (string)*
 
-Only one category is allowed. Make sure to create a `<category>.md` file in `category` directory if it's a new one.
+하나의 카테고리만 허용됩니다. 새로운 카테고리인 경우 `category` 디렉토리에 `<category>.md` 파일을 생성하십시오.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -193,11 +193,11 @@ category: blog
 
 #### `tags`
 
-Type: *list*
+타입: *리스트 (list)*
 
-A list of the post keywords. It's used in the home, category and tags pages, and as meta keywords for SEO purposes.
+게시물 키워드 목록입니다. 홈, 카테고리 및 태그 페이지에서 사용되며, SEO 목적으로 메타 키워드로 사용됩니다.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -212,17 +212,17 @@ tags:
 
 #### `author`
 
-*(Optional)*
+*(선택사항)*
 
-Type: *string*
+타입: *문자열 (string)*
 
-The post author. Set the author filename used in the `_authors` folder.
+게시물 작성자입니다. `_authors` 폴더에 있는 작성자 파일 이름을 설정하십시오.
 
-Every time you create a new author, make sure to create a file in there too.
+새로운 작성자를 생성할 때마다 해당 폴더에 파일을 생성해야 합니다.
 
-Leave it blank if there is no author.
+작성자가 없을 경우 비워 두십시오.
 
-Example:
+예시:
 
 ```yaml
 # _posts/2019-08-22-example.md
@@ -235,15 +235,15 @@ author: thiagorossener
 
 #### `paginate`
 
-*(Optional)*
+*(선택사항)*
 
-Type: *boolean*
+타입: *불리언 (boolean)*
 
-To break your post into pages, set the property `paginate` to `true` and use the divider `--page-break--` where you want to break it.
+게시물을 페이지로 나누려면 `paginate` 속성을 `true`로 설정하고 나누고자 하는 위치에 구분 기호 `--page-break--`를 사용하십시오.
 
-**Note:** The template uses the `jekyll-paginate-content`, which is [not supported for GitHub Pages](https://pages.github.com/versions/). If you need that feature, please deploy somewhere else like Netlify.
+**참고:** 템플릿은 `jekyll-paginate-content`를 사용하며, 이는 [GitHub Pages에서 지원되지 않습니다](https://pages.github.com/versions/). 이 기능이 필요하다면 Netlify와 같은 다른 곳에 배포하십시오.
 
-Example:
+예시:
 
 ```yaml
 # 2019-08-20-ten-skills-you-need-to-have-to-become-a-good-developer.md
@@ -260,6 +260,6 @@ Skill 1
 Skill 2
 ```
 
-It would look like:
+다음과 같이 표시됩니다:
 
-![Paginated Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430021/paginated-page-screenshot_zx4xjn.jpg)
+![페이지네이션된 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430021/paginated-page-screenshot_zx4xjn.jpg)
