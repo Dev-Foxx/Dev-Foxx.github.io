@@ -1,218 +1,218 @@
-# Features
+# 기능
 
-_Jekflix_ comes with features to help you create/edit/share content and provide a nice experience for your visitors.
+*Jekflix*는 콘텐츠 생성/편집/공유를 돕고 방문자에게 훌륭한 경험을 제공하기 위한 다양한 기능을 제공합니다.
 
-- [Live Search](features.md#live-search)
-- [Estimated Reading Time](features.md#estimated-reading-time)
-- [Reading Progress Bar](features.md#reading-progress-bar) *(optional)*
-- ["New Post" tag](features.md#new-post-tag)
-- [Load images on demand](features.md#load-images-on-demand)
-- [Push Menu](features.md#push-menu)
-- [SVG icons](features.md#svg-icons)
-- [Shell script to create posts](features.md#shell-script-to-create-posts)
-- [Tags page](features.md#tags-page)
-- [About page](features.md#about-page)
-- [Contact page](features.md#contact-page)
-- [404 error page](features.md#404-error-page)
-- [Feed RSS](features.md#feed-rss)
-- [Disqus](features.md#disqus) *(optional)*
-- [Featured post](features.md#featured-post) *(optional)*
-- [Home page pagination](features.md#home-page-pagination) *(optional)*
-- [Posts sidebar](features.md#posts-sidebar) *(optional)*
-- [Paginated posts](features.md#paginated-posts) *(optional)*
-- ["Before you go" modal](features.md#before-you-go-modal) *(optional)*
-- [Post recommendation](features.md#post-recommendation)
-- [Netlify CMS ready](features.md#netlify-cms-ready)
-- [Translations](setup.md#translations)
-- [Math Expressions](features.md#math-expressions) *(optional)*
+- [실시간 검색](features.md#live-search)
+- [예상 읽기 시간](features.md#estimated-reading-time)
+- [읽기 진행 바](features.md#reading-progress-bar) *(선택사항)*
+- ["새 게시물" 태그](features.md#new-post-tag)
+- [요구 시 이미지 로드](features.md#load-images-on-demand)
+- [푸시 메뉴](features.md#push-menu)
+- [SVG 아이콘](features.md#svg-icons)
+- [게시물 생성용 셸 스크립트](features.md#shell-script-to-create-posts)
+- [태그 페이지](features.md#tags-page)
+- [소개 페이지](features.md#about-page)
+- [문의 페이지](features.md#contact-page)
+- [404 오류 페이지](features.md#404-error-page)
+- [RSS 피드](features.md#feed-rss)
+- [Disqus](features.md#disqus) *(선택사항)*
+- [추천 게시물](features.md#featured-post) *(선택사항)*
+- [홈 페이지 페이지네이션](features.md#home-page-pagination) *(선택사항)*
+- [게시물 사이드바](features.md#posts-sidebar) *(선택사항)*
+- [페이지네이션된 게시물](features.md#paginated-posts) *(선택사항)*
+- ["떠나기 전에" 모달](features.md#before-you-go-modal) *(선택사항)*
+- [게시물 추천](features.md#post-recommendation)
+- [Netlify CMS 준비됨](features.md#netlify-cms-ready)
+- [번역](setup.md#translations)
+- [수학 표현식](features.md#math-expressions) *(선택사항)*
 
-## Live Search
+## 실시간 검색
 
-Located in the top right corner of the template, the search component looks for post titles, categories and tags. It's a simple search for static websites.
+템플릿의 오른쪽 상단에 위치한 검색 컴포넌트는 게시물 제목, 카테고리, 태그를 검색합니다. 이는 정적 웹사이트에 적합한 간단한 검색 기능입니다.
 
-![Search Box Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426001/search-screenshot_sc5edu.jpg)
+![검색 상자 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426001/search-screenshot_sc5edu.jpg)
 
-## Estimated Reading Time
+## 예상 읽기 시간
 
-Every post shows an estimated reading time above its title, the minutes are calculated based on an average reader speed.
+각 게시물은 제목 위에 예상 읽기 시간을 표시합니다. 이는 평균 독서 속도를 기준으로 계산됩니다.
 
-![Estimated Reading Time Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426097/minutes-to-read-screenshot_akvu69.jpg)
+![예상 읽기 시간 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426097/minutes-to-read-screenshot_akvu69.jpg)
 
-## Reading Progress Bar
+## 읽기 진행 바
 
-*(Optional)*
+*(선택사항)*
 
-It also shows a reading progress bar based on the reading time and the scroll position in the page.
+페이지 내 읽기 시간과 스크롤 위치를 기준으로 읽기 진행 바를 표시합니다.
 
-![Reading Progress Bar Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566425470/progress-bar-screenshot_gem7xb.jpg)
+![읽기 진행 바 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566425470/progress-bar-screenshot_gem7xb.jpg)
 
-You can show/hide the time bar, see the [docs](settings.md#show_time_bar).
+읽기 진행 바를 표시하거나 숨기려면 [문서](settings.md#show_time_bar)를 참고하십시오.
 
-## "New Post" tag
+## "새 게시물" 태그
 
-For posts released up to 7 days before the current date, a tag where reads "New Post" is attached to them in the home page.
+현재 날짜로부터 최대 7일 이내에 게시된 게시물에는 홈 페이지에서 "새 게시물" 태그가 붙습니다.
 
-![New Post Tag Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566425920/new-post-tag-screenshot_nyuycr.jpg)
+![새 게시물 태그 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566425920/new-post-tag-screenshot_nyuycr.jpg)
 
-## Load images on demand
+## 요구 시 이미지 로드
 
-To improve performance in the home page, only the posts above the fold are loaded initially. The next posts are loaded when scrolling down as needed.
+홈 페이지 성능을 향상시키기 위해 초기에는 화면 상단의 게시물만 로드됩니다. 다음 게시물은 아래로 스크롤할 때 필요에 따라 로드됩니다.
 
-![Loading Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426573/loading-screenshot_akchmx.jpg)
+![로드 중 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426573/loading-screenshot_akchmx.jpg)
 
-## Push Menu
+## 푸시 메뉴
 
-The template menu is hidden by default and pushes the content to the right when open.
+템플릿 메뉴는 기본적으로 숨겨져 있으며, 열릴 때 콘텐츠를 오른쪽으로 밀어냅니다.
 
-![Menu Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426941/menu-screenshot_qsoz1z.jpg)
+![메뉴 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566426941/menu-screenshot_qsoz1z.jpg)
 
-## SVG icons
+## SVG 아이콘
 
-All icons used in the template are SVGs, providing a nice look for every resolution.
+템플릿에서 사용된 모든 아이콘은 SVG 형식으로, 모든 해상도에서 선명한 모습을 제공합니다.
 
-![Template Icons](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566427250/icons-screenshot_uhk80e.jpg)
+![템플릿 아이콘](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566427250/icons-screenshot_uhk80e.jpg)
 
-## Shell script to create posts
+## 게시물 생성용 셸 스크립트
 
-A script named [initpost.sh](https://github.com/thiagorossener/jekflix-template/blob/master/initpost.sh) is provided to make it easier to create posts by command line.
+[initpost.sh](https://github.com/thiagorossener/jekflix-template/blob/master/initpost.sh)라는 스크립트가 제공되어 명령줄에서 게시물을 쉽게 생성할 수 있습니다.
 
-In the project directory, just run:
+프로젝트 디렉토리에서 다음 명령을 실행하세요:
 
 ```
-$ ./initpost.sh -c "New post title"
+$ ./initpost.sh -c "새 게시물 제목"
 ```
 
-## Tags page
+## 태그 페이지
 
-All tags are gathered in a single page where visitors can find the blog posts separate by its tags.
+모든 태그가 한 페이지에 모여 방문자가 태그별로 블로그 게시물을 찾을 수 있도록 합니다.
 
-![Tags Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430436/tags-page-screenshot_eeyyt8.jpg)
+![태그 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430436/tags-page-screenshot_eeyyt8.jpg)
 
-Check it out [here](https://jekflix.rossener.com/tags/).
+[태그 페이지를 확인하세요](https://jekflix.rossener.com/tags/).
 
-## About page
+## 소개 페이지
 
-An About page is provided by default, you can delete it at any moment.
+소개 페이지가 기본으로 제공되며, 언제든 삭제할 수 있습니다.
 
-![About Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430703/about-page-screenshot_rgchze.jpg)
+![소개 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430703/about-page-screenshot_rgchze.jpg)
 
-Check it out [here](https://jekflix.rossener.com/about/).
+[소개 페이지를 확인하세요](https://jekflix.rossener.com/about/).
 
-## Contact page
+## 문의 페이지
 
-A contact form created with Vue is present in the template, so you don't have to do it from scratch.
+Vue로 작성된 문의 양식이 템플릿에 포함되어 있어 처음부터 작성할 필요가 없습니다.
 
-![Contact Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476192/contact-page-screenshot_efux2y.jpg)
+![문의 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476192/contact-page-screenshot_efux2y.jpg)
 
-Check it out [here](https://jekflix.rossener.com/contact/).
+[문의 페이지를 확인하세요](https://jekflix.rossener.com/contact/).
 
-## 404 error page
+## 404 오류 페이지
 
-The template also handles 404 errors already.
+템플릿은 404 오류도 기본적으로 처리합니다.
 
-![404 Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476323/404-page-screenshot_qiieyi.jpg)
+![404 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476323/404-page-screenshot_qiieyi.jpg)
 
-Check it out [here](https://jekflix.rossener.com/404/).
+[404 페이지를 확인하세요](https://jekflix.rossener.com/404/).
 
-## Feed RSS
+## RSS 피드
 
-A feed file is automatically generated on every build.
+빌드 시마다 자동으로 피드 파일이 생성됩니다.
 
-Check it out a sample [here](https://jekflix.rossener.com/feed.xml).
+[RSS 피드 샘플을 확인하세요](https://jekflix.rossener.com/feed.xml).
 
 ## Disqus
 
-*(Optional)*
+*(선택사항)*
 
-Jekflix Template implements the Disqus plugin, allowing visitors to comment in posts.
+Jekflix 템플릿은 Disqus 플러그인을 구현하여 방문자가 게시물에 댓글을 남길 수 있습니다.
 
-See the [docs](settings.md#disqus_username) to configure it.
+구성 방법은 [문서](settings.md#disqus_username)를 참고하세요.
 
-## Featured post
+## 추천 게시물
 
-*(Optional)*
+*(선택사항)*
 
-In this 2.0 version, a hero lockup got added to the home page, like Netflix does with movies.
+이 버전 2.0에서는 넷플릭스가 영화와 함께 하는 것처럼 홈 페이지에 히어로 락업이 추가되었습니다.
 
-To turn on/off this feature, see the [docs](settings.md#show_hero).
+이 기능을 켜거나 끄려면 [문서](settings.md#show_hero)를 참고하세요.
 
-![Page with hero screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566477681/page-with-hero-screenshot_ixyjzp.jpg)
+![히어로가 있는 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566477681/page-with-hero-screenshot_ixyjzp.jpg)
 
-## Home page pagination
+## 홈 페이지 페이지네이션
 
-*(Optional)*
+*(선택사항)*
 
-There are two different options to show the posts in the home page, the first one is loading new posts when scrolling down and the second one is adding pagination.
+홈 페이지에서 게시물을 표시하는 두 가지 옵션이 있습니다. 첫 번째는 스크롤할 때 새 게시물을 로드하는 것이고, 두 번째는 페이지네이션을 추가하는 것입니다.
 
-To add pagination, see the [docs](settings.md#paginate).
+페이지네이션을 추가하려면 [문서](settings.md#paginate)를 참고하세요.
 
-## Posts sidebar
+## 게시물 사이드바
 
-*(Optional)*
+*(선택사항)*
 
-As many people has asked for, Jekflix Template 2.0 adds an optional sidebar to posts.
+많은 분들이 요청한 대로, Jekflix 템플릿 2.0에는 게시물에 선택적으로 사이드바를 추가할 수 있는 기능이 포함되었습니다.
 
-To show/hide the sidebar, see the [docs](settings.md#two_columns_layout).
+사이드바를 표시하거나 숨기려면 [문서](settings.md#two_columns_layout)를 참고하세요.
 
-![Post with two columns screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476793/two-columns-screenshot_phumrl.jpg)
+![두 개의 열이 있는 게시물 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566476793/two-columns-screenshot_phumrl.jpg)
 
-## Paginated posts
+## 페이지네이션된 게시물
 
-*(Optional)*
+*(선택사항)*
 
-You can also boost your advertising views by paginating posts.
+게시물을 여러 페이지로 나눠 광고 조회수를 높일 수도 있습니다.
 
-To break your posts into different pages, see the [docs](post.md#paginate).
+게시물을 여러 페이지로 나누는 방법은 [문서](post.md#paginate)를 참고하세요.
 
-![Paginated Page Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430021/paginated-page-screenshot_zx4xjn.jpg)
+![페이지네이션된 페이지 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566430021/paginated-page-screenshot_zx4xjn.jpg)
 
-## "Before you go" modal
+## "떠나기 전에" 모달
 
-*(Optional)*
+*(선택사항)*
 
-To keep visitors interested in your content, you can show them some posts recommendations before they leave the page or/and they reach the post end.
+방문자가 페이지를 떠나기 전에 또는 게시물 끝에 도달했을 때 게시물 추천을 보여줌으로써 방문자가 콘텐츠에 관심을 계속 가질 수 있도록 할 수 있습니다.
 
-See the [docs](settings.md#show_modal_on_exit) for more information.
+자세한 내용은 [문서](settings.md#show_modal_on_exit)를 참고하세요.
 
-![Modal screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566478245/before-you-go-screenshot_prrplk.jpg)
+![모달 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566478245/before-you-go-screenshot_prrplk.jpg)
 
-## Post recommendation
+## 게시물 추천
 
-By default, all posts show a post recommendation when visitor reaches the end of the article, like:
+기본적으로 모든 게시물은 방문자가 글 끝에 도달하면 게시물 추천을 표시합니다.
 
-![Recommendation Screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566478555/recommendation-screenshot_wzhchs.jpg)
+![추천 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566478555/recommendation-screenshot_wzhchs.jpg)
 
-This feature is supposed to be similar to the Netflix recommendation when you finish a movie or serie episode.
+이 기능은 넷플릭스에서 영화나 시리즈 에피소드를 마칠 때 나오는 추천과 유사한 것을 목표로 합니다.
 
-## Math Expressions
+## 수학 표현식
 
-*(Optional)*
+*(선택사항)*
 
-*Jekflix Template 3.1.0* now supports math expressions through [MathJax](https://www.mathjax.org/) library, thanks to **[@XieGuochao](https://github.com/XieGuochao)**.
+*Jekflix 템플릿 3.1.0*은 이제 **[@XieGuochao](https://github.com/XieGuochao)** 덕분에 [MathJax](https://www.mathjax.org/) 라이브러리를 통해 수학 표현식을 지원합니다.
 
-You only need 2 steps:
+2단계만 필요합니다:
 
-1. Set `math: true` for a post.
-2. Adopt the _MathJax_'s grammar for $\LaTeX$.
+1. 게시물에 `math: true`를 설정합니다.
+2. _MathJax_의 $\LaTeX$ 문법을 사용합니다.
 
-For example, `$\sum_{i=1}{10} = 55$` will be rendered as <img src="https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,q_78,w_270/v1585835744/Screen_Shot_2020-04-02_at_10.55.24_uafb07.jpg" width="135">.
+예를 들어, `$\sum_{i=1}{10} = 55$`는 다음과 같이 렌더링됩니다: <img src="https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,q_78,w_270/v1585835744/Screen_Shot_2020-04-02_at_10.55.24_uafb07.jpg" width="135">.
 
-## Netlify CMS ready
+## Netlify CMS 준비됨
 
-The newest addition to the *Jekflix Template 2.0.0* is the Netlify CMS integration.
+가장 최신 버전의 *Jekflix 템플릿 2.0.0*에는 Netlify CMS 통합이 추가되었습니다.
 
-With Netlify CMS you will be able to create/edit posts using an editor, access a workflow panel and change every aspect of your blog with some clicks.
+Netlify CMS를 사용하면 편집기를 통해 게시물을 생성/편집하고 워크플로우 패널에 접근하며 클릭 몇 번으로 블로그의 모든 측면을 변경할 수 있습니다.
 
-To use the Netlify CMS, you need to go through some steps first. See the [docs](netlify-cms.md#netlify-cms) for more info.
+Netlify CMS를 사용하려면 몇 가지 단계를 거쳐야 합니다. 자세한 내용은 [문서](netlify-cms.md#netlify-cms)를 참고하세요.
 
-Here are some screenshots:
+다음은 몇 가지 스크린샷입니다:
 
-![Netlify CMS post list screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-1_a0qezm.jpg)
+![Netlify CMS 게시물 목록 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-1_a0qezm.jpg)
 
-![Netlify CMS post edition screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-2_aupygb.jpg)
+![Netlify CMS 게시물 편집 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-2_aupygb.jpg)
 
-![Netlify CMS workflow screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-3_bj5sks.jpg)
+![Netlify CMS 워크플로우 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-3_bj5sks.jpg)
 
-![Netlify CMS site settings screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-4_ycfqdp.jpg)
+![Netlify CMS 사이트 설정 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-4_ycfqdp.jpg)
 
-![Netlify CMS theme settings screenshot](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-5_k6dan9.jpg)
+![Netlify CMS 테마 설정 스크린샷](https://res.cloudinary.com/dm7h7e8xj/image/upload/v1566479287/netlify-page-5_k6dan9.jpg)
