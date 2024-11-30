@@ -1,87 +1,107 @@
-{% assign author = site.authors | where: "name", page.author | first %}
-{% if author %}
+{% assign author = site.authors | where: "name", page.author | first %} <!-- site.authors에서 페이지 작성자를 찾아 첫 번째 결과를 author로 할당 -->
+{% if author %} <!-- 작성자가 존재하는 경우에만 다음 내용을 렌더링 -->
   <section class="author">
     <div class="details">
-      {% if author.photo %}
-        <img class="img-rounded" src="{{ author.photo }}" alt="{{ author.display_name }}">
-      {% else %}
-        <img class="img-rounded" src="/assets/img/user.jpg" alt="{{ author.display_name }}">
+      {% if author.photo %} <!-- 작성자 사진이 있는 경우 해당 사진을 사용 -->
+        <img class="img-rounded" src="{{ author.photo }}" alt="{{ author.display_name }}"> <!-- 작성자 사진 표시 -->
+      {% else %} <!-- 작성자 사진이 없는 경우 기본 이미지 사용 -->
+        <img class="img-rounded" src="/assets/img/user.jpg" alt="{{ author.display_name }}"> <!-- 기본 사용자 이미지 표시 -->
       {% endif %}
-      <p class="def">{{ site.translations.text.author | default: "Author" }}</p>
+      <p class="def">{{ site.translations.text.author | default: "Author" }}</p> <!-- 작성자 레이블 표시 -->
       <h3 class="name">
-        <a href="{{ author.url }}">{{ author.display_name }}</a>
+        <a href="{{ author.url }}">{{ author.display_name }}</a> <!-- 작성자 이름과 URL 연결 -->
       </h3>
-      <p class="desc">{{ author.bio }}</p>
+      <p class="desc">{{ author.bio }}</p> <!-- 작성자 소개 표시 -->
       <p>
-        {% if author.github_username %}
+        {% if author.github_username %} <!-- GitHub 사용자명이 있는 경우 링크 생성 -->
           <a href="https://github.com/{{ author.github_username }}" title="Github">
-            <svg><use xlink:href="#icon-github"></use></svg>
+            <svg><use xlink:href="#icon-github"></use></svg> <!-- GitHub 아이콘 링크 -->
           </a>
         {% endif %}
-        {% if author.facebook_username %}
+        {% if author.facebook_username %} <!-- Facebook 사용자명이 있는 경우 링크 생성 -->
           <a href="https://www.facebook.com/{{ author.facebook_username }}" title="Facebook">
-            <svg><use xlink:href="#icon-facebook"></use></svg>
+            <svg><use xlink:href="#icon-facebook"></use></svg> <!-- Facebook 아이콘 링크 -->
           </a>
         {% endif %}
-        {% if author.twitter_username %}
+        {% if author.twitter_username %} <!-- Twitter 사용자명이 있는 경우 링크 생성 -->
           <a href="https://twitter.com/{{ author.twitter_username }}" title="Twitter">
-            <svg><use xlink:href="#icon-twitter"></use></svg>
+            <svg><use xlink:href="#icon-twitter"></use></svg> <!-- Twitter 아이콘 링크 -->
           </a>
         {% endif %}
-        {% if author.medium_username %}
+        {% if author.medium_username %} <!-- Medium 사용자명이 있는 경우 링크 생성 -->
           <a href="https://medium.com/@{{ author.medium_username }}" title="Medium">
-            <svg><use xlink:href="#icon-medium"></use></svg>
+            <svg><use xlink:href="#icon-medium"></use></svg> <!-- Medium 아이콘 링크 -->
           </a>
         {% endif %}
-        {% if author.instagram_username %}
+        {% if author.instagram_username %} <!-- Instagram 사용자명이 있는 경우 링크 생성 -->
           <a href="https://www.instagram.com/{{ author.instagram_username }}" title="Instagram">
-            <svg><use xlink:href="#icon-instagram"></use></svg>
+            <svg><use xlink:href="#icon-instagram"></use></svg> <!-- Instagram 아이콘 링크 -->
           </a>
         {% endif %}
-        {% if author.linkedin_username %}
+        {% if author.linkedin_username %} <!-- LinkedIn 사용자명이 있는 경우 링크 생성 -->
           <a href="https://www.linkedin.com/in/{{ author.linkedin_username }}" title="LinkedIn">
-            <svg><use xlink:href="#icon-linkedin"></use></svg>
+            <svg><use xlink:href="#icon-linkedin"></use></svg> <!-- LinkedIn 아이콘 링크 -->
           </a>
         {% endif %}
       </p>
     </div>
   </section>
 
-  {% assign author_urls = '' %}
-  {% if author.github_username %}
+  {% assign author_urls = '' %} <!-- 작성자 소셜 미디어 URL들을 저장할 변수 초기화 -->
+  {% if author.github_username %} <!-- GitHub 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",' %}
   {% endif %}
-  {% if author.facebook_username %}
+  {% if author.facebook_username %} <!-- Facebook 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://www.facebook.com/' | append: author.facebook_username | append: '",' %}
   {% endif %}
-  {% if author.twitter_username %}
+  {% if author.twitter_username %} <!-- Twitter 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://twitter.com/' | append: author.twitter_username | append: '",' %}
   {% endif %}
-  {% if author.medium_username %}
+  {% if author.medium_username %} <!-- Medium 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: author.medium_username | append: '",' %}
   {% endif %}
-  {% if author.instagram_username %}
+  {% if author.instagram_username %} <!-- Instagram 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://www.instagram.com/' | append: author.instagram_username | append: '",' %}
   {% endif %}
-  {% if author.linkedin_username %}
+  {% if author.linkedin_username %} <!-- LinkedIn 사용자명이 있는 경우 URL 추가 -->
       {% assign author_urls = author_urls | append: '"https://www.linkedin.com/in/' | append: author.linkedin_username | append: '",' %}
   {% endif %}
 
-  <script type="application/ld+json">
-  {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "{{ author.display_name }}",
-      {% if author.photo %}
-      "image": "{{ author.photo }}",
-      {% else %}
-      "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
-      {% endif %}
-      "jobTitle": "{{ author.position }}",
-      "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}",
-      "sameAs": [
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "{{ author.display_name }}",
+    {% if author.photo %}
+    "image": "{{ author.photo }}",
+    {% else %}
+    "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
+    {% endif %}
+    "jobTitle": "{{ author.position }}",
+    "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}",
+    "sameAs": [
         {{ author_urls | split: "," | join: "," }}
-      ]
-  }
-  </script>
-{% endif %}
+    ]
+}
+</script>
+
+<!-- 
+JSON-LD 데이터 설명:
+- "@context": JSON-LD의 컨텍스트 설정.
+- "@type": JSON-LD의 타입 설정 (작성자 정보).
+- "name": 작성자 이름 설정.
+- "image": 작성자 사진 URL 설정 (사진이 없으면 기본 이미지 사용).
+- "jobTitle": 작성자의 직책 설정.
+- "url": 작성자 URL 설정.
+- "sameAs": 작성자의 소셜 미디어 링크 추가.
+-->
+
+{% endif %} <!-- 작성자 정보 표시 종료 -->
+
+
+<!-- 이 파일은 작성자(author) 정보를 표시하는 HTML 코드입니다. 작성자의 이름, 사진, 소셜 미디어 링크 등을 동적으로 표시하여, 각 작성자의 정보를 독자에게 보여줍니다. -->
+<!-- {% assign author = site.authors | where: "name", page.author | first %} - 해당 작성자의 정보를 site.authors에서 가져옵니다. -->
+<!-- 작성자가 존재하는 경우(author가 존재하면) 섹션을 렌더링합니다. -->
+<!-- 작성자의 사진이 존재하면 해당 사진을 표시하고, 없으면 기본 사용자 이미지를 표시합니다. -->
+<!-- 작성자의 이름, 직책, 소개, 그리고 소셜 미디어 링크를 보여줍니다. 필요하지 않은 소셜 미디어는 조건문을 통해 제외할 수 있습니다. -->
+<!-- 마지막으로 JSON-LD 형식으로 작성자의 구조화 데이터를 포함하여 검색 엔진 최적화를 돕습니다. -->

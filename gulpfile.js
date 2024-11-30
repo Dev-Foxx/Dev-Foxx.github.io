@@ -10,12 +10,11 @@ import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
 import yaml from "gulp-yaml";
 import browserSync from "browser-sync";
-import cp from "child_process";
+import { exec } from "child_process";
 import { deleteAsync } from "del";
 import fs from "fs";
 import jsonSass from "json-sass";
 import source from "vinyl-source-stream";
-
 
 /**
  * Notify
@@ -49,10 +48,17 @@ function config() {
  */
 function jekyll(done) {
   notify('Building Jekyll...');
-  let bundle = process.platform === "win32" ? "bundle.bat" : "bundle";
-  return cp
-    .spawn(bundle, ['exec', 'jekyll build'], { stdio: 'inherit' })
-    .on('close', done);
+  let command = process.platform === "win32" ? "bundle exec jekyll build" : "bundle exec jekyll build";
+
+  exec(command, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`Error executing Jekyll build: ${stderr}`);
+      done(new Error('Jekyll build failed'));
+    } else {
+      console.log(stdout);
+      done();
+    }
+  });
 }
 
 /**
@@ -206,7 +212,7 @@ function watch() {
  * - Compile the Jekyll site
  * - Launch BrowserSync & watch files
  */
-const run = gulp.series(gulp.parallel(js, theme, images), config, jekyll, gulp.parallel(server, watch));
+const run = gulp.series(gulp.parallel(js, theme, images), config, gulp.parallel(server, watch));
 
 /**
  * Build Task
@@ -220,3 +226,4 @@ const run = gulp.series(gulp.parallel(js, theme, images), config, jekyll, gulp.p
 const build = gulp.series(gulp.parallel(js, theme, images), config, jekyll);
 
 export { run as default, build };
+
