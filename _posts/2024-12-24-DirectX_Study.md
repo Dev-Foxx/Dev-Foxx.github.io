@@ -3,7 +3,7 @@ layout: post
 title: DirectX - Vertex
 subtitle: Vertex, NDC Description
 author: Dev Fox
-categories: DirectX
+categories: DirectX, Online
 tags: [DirectX,Vertex,NDC]
 ---
 
