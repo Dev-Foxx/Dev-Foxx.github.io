@@ -20,8 +20,6 @@ $$
 \mathbf{u} \cdot \mathbf{v} = u_xv_x+u_yv_y+u_zv_z \tag{3}
 $$
 
-<a id="formula-4"></a>
-
 다른 말로 하면 내적은 대응되는 성분들의 곱들의 합이다. 정의만 봐서는 내적의 기하학적 의미가 잘 보이지 않는다. 코사인 법칙을 이용하면 다음과 같은 관계를 찾아낼 수 있다.
 
 
@@ -60,7 +58,7 @@ $$
 \|\mathbf{y}\| = \sqrt{(-4)^2 + 0^2 + (-1)^2} = \sqrt{17}
 $$
 
-다음으로 [4번](#formula-4) 식을 적용한 후 세타($\theta$)를 구한다.
+다음으로 4번 식을 적용한 후 세타($\theta$)를 구한다.
 
 $$
 \cos\theta = \frac{\mathbf{x} \cdot \mathbf{y}}{\|\mathbf{x}\| \|\mathbf{y}\|} = \frac{-7}{\sqrt{14} \sqrt{17}}
