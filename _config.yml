@@ -26,7 +26,7 @@ description: >- # SEO 메타 및 Atom 피드에 사용됩니다.
 url: "https://Dev-Foxx.github.io"
 
 github:
-  username: Dev_Fox # GitHub 사용자 이름으로 변경하세요.
+  username: Dev-Foxx # GitHub 사용자 이름으로 변경하세요.
 
 # twitter:
 #   username: twitter_username # Twitter 사용자 이름으로 변경하세요.
@@ -39,7 +39,7 @@ social:
   links:
     # 첫 번째 요소는 저작권 소유자의 링크로 사용됩니다.
     # - https://twitter.com/username # Twitter 홈페이지로 변경하세요.
-    - https://github.com/Dev_Foxx # GitHub 홈페이지로 변경하세요.
+    - https://github.com/Dev-Foxx # GitHub 홈페이지로 변경하세요.
     # 아래 주석을 해제하여 추가 소셜 링크를 추가하세요.
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -148,6 +148,11 @@ paginate: 10
 
 # 사이트의 기본 URL
 baseurl: ""
+
+# MathJax 설정
+math:
+  enable: true
+
 
 # ------------ 아래 옵션은 수정하지 않는 것이 좋습니다 ------------------
 

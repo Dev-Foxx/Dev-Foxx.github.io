@@ -1,9 +1,9 @@
 ---
 layout: post
-title: DirectX - 01 Vector
+title: Vector - Part1 벡터와 좌표계
 subtitle: Vector Description
 author: Dev Fox
-categories: DirectX, Book
+categories: Book, math
 tags: [DirectX,Vector]
 ---
 
