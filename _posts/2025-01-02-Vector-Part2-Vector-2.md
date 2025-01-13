@@ -9,7 +9,7 @@ tags: [DirectX,Vector]
 
 # 벡터 대수
 
-[저번 포스팅](https://dev-foxx.github.io/posts/DirectX_Part1-Vector/) 에서는 벡터의 간단한 정의와 좌표계, 기본적인 연산방법에 대해서 알아봤다.<br>
+[저번 포스팅](https://dev-foxx.github.io/posts/Vector-Part1/) 에서는 벡터의 간단한 정의와 좌표계, 기본적인 연산방법에 대해서 알아봤다.<br>
 
 ---
 ## 1. 길이와 단위벡터
