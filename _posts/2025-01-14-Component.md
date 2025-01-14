@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Unreal Engine Actor
-subtitle: Actor Description
+title: Unreal Engine Component
+description: Component Description
+subtitle: Component Description
 author: Dev Fox
 categories: Unreal, Class
 tags: [Unreal, Component]

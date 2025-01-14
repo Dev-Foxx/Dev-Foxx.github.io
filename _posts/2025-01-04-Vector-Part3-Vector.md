@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vector - Part3 내적
+description: 벡터의 내적
 subtitle: Vector Description
 author: Dev Fox
 categories: Book, math

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Eclipsera Project
+description: Eclipsera 프로젝트 정리
 subtitle: 프로젝트 정리
 author: Dev Fox
 categories: Project, Eclipsera

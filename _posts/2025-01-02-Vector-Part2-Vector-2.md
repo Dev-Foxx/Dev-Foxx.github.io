@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vector - Part2 단위벡터
+description: 벡터의 길이와 단위벡터
 subtitle: Vector Description
 author: Dev Fox
 categories: Book, math

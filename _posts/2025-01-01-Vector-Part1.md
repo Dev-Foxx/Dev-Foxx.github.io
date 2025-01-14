@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vector - Part1 벡터와 좌표계
+description: 벡터의 기본적인 연산과 좌표계를 알아보자
 subtitle: Vector Description
 author: Dev Fox
 categories: Book, math
